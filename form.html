@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>投稿フォーム</title></head>
+<body>
+<h1>投稿フォーム</h1>
+<form action="/save" method="post" th:object="${post}">
+    <input type="hidden" th:field="*{id}" />
+    <p>タイトル：<input type="text" th:field="*{title}" /></p>
+    <p>内容：<textarea th:field="*{content}"></textarea></p>
+    <button type="submit">保存</button>
+</form>
+</body>
+</html>
